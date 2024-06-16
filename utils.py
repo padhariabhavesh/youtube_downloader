@@ -1,16 +1,11 @@
-import os
-import platform
-from pathlib import Path
 import streamlit as st
+from pathlib import Path
 
+# Function to determine the default download folder
 def get_download_folder():
-    if platform.system() == "Windows":
-        return str(Path.home() / "Downloads")
-    elif platform.system() == "Darwin":  # macOS
-        return str(Path.home() / "Downloads")
-    else:
-        return str(Path.home() / "Downloads")
+    return str(Path.home() / "Downloads")
 
+# Function to load custom CSS
 def load_css(file_path):
     with open(file_path) as f:
         st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
