@@ -13,9 +13,9 @@ def download_youtube_video(url, output_path):
         # Download the video
         stream.download(output_path=output_path)
 
-        # Get the filename of the downloaded video
-        filename = os.path.basename(stream.default_filename)
+        # Get the full path of the downloaded video
+        video_path = os.path.join(output_path, stream.default_filename)
 
-        return f"Video downloaded successfully. You can find it in '{output_path}' as '{filename}'."
+        return f"Video downloaded successfully. You can find it in '{output_path}' as '{stream.default_filename}'.", video_path
     except Exception as e:
-        return f"An error occurred: {e}"
+        return f"An error occurred: {e}", None
