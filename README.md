@@ -47,6 +47,7 @@ Click the "Download Video" button.
 The app will process the request and provide a download button for the video file.
 
 # Project Structure
+```
 youtube-video-downloader/
 │
 ├── app.py                  # Main application script
@@ -59,7 +60,7 @@ youtube-video-downloader/
 │   ├── favicon.ico         # Favicon for the app
 │   └── icon.png            # Icon image displayed in the app
 └── README.md               # Project documentation
-
+```
 Code Overview
 app.py
 
