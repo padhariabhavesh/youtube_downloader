@@ -1,4 +1,5 @@
 import os
+from pytube import YouTube
 
 # Function to download YouTube video
 def download_youtube_video(url, output_path):
@@ -15,6 +16,6 @@ def download_youtube_video(url, output_path):
         # Get the filename of the downloaded video
         filename = os.path.basename(stream.default_filename)
 
-        return f"Video downloaded successfully. You can find it in your device's download folder as '{filename}'."
+        return f"Video downloaded successfully. You can find it in '{output_path}' as '{filename}'."
     except Exception as e:
         return f"An error occurred: {e}"
